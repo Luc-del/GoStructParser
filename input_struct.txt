@@ -1,0 +1,30 @@
+// InboundTransferSentPayload is an event payload for classic and instant inbound transfers.
+type InboundTransferSentPayload struct {
+	ID                string      `json:"id"`
+	CreditorIbanID    null.String `json:"creditor_iban_id"`
+	DebtorIbanID      string      `json:"debtor_iban_id"`
+	TransactionID     string      `json:"transaction_id"`
+	BatchID           null.String `json:"batch_id"`
+	EventDate         time.Time   `json:"event_date"`
+	MemberID          int64       `json:"member_id"`
+	EventOriginator   string      `json:"event_originator"`
+	EventOriginatorID string      `json:"event_originator_id"`
+	Amount            int         `json:"amount"`
+	EventStatus       string      `json:"event_status"`
+	SepaDebtor        string      `json:"sepa_debtor"`
+	SepaDebtorIban    string      `json:"sepa_debtor_iban"`
+	SepaCreditor      string      `json:"sepa_creditor"`
+	SepaCreditorIban  string      `json:"sepa_creditor_iban"`
+	EventReason       string      `json:"event_reason"`
+	EventReasonCode   string      `json:"event_reason_code"`
+	ExternalEventID   string      `json:"external_event_id"`
+	E2ERef            string      `json:"e2e_ref"`
+	RemittanceInfo    string      `json:"remittance_info"`
+	DebtorName        string      `json:"debtor_name"`
+	DebtorID          null.String `json:"debtor_id"` // contains the id is user has the debtor as beneficiary
+	DebtorLabel       null.String `json:"debtor_label"`
+	DebtorIban        string      `json:"debtor_iban"`
+	LydiaAccountID    int64       `json:"lydia_account_id"`
+	Currency          string      `json:"currency"`
+	IsInstant         bool        `json:"is_instant"`
+}
